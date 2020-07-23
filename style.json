@@ -36,16 +36,17 @@
     "mapbox:autocomposite": false,
     "openmaptiles:version": "3.x",
     "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
+    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
+    "maputnik:renderer": "mbgljs"
   },
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://free.tilehosting.com/data/v3.json?key={key}"
+      "url": "https://tiles.maps.elastic.co/data/v3.json"
     }
   },
-  "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
-  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://tiles.maps.elastic.co/styles/osm-bright/sprite",
+  "glyphs": "https://tiles.maps.elastic.co/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -368,6 +369,10 @@
     },
     {
       "id": "waterway_tunnel",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "waterway",
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -383,9 +388,6 @@
           "tunnel"
         ]
       ],
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "waterway",
       "layout": {
         "line-cap": "round"
       },
@@ -408,8 +410,7 @@
           2,
           4
         ]
-      },
-      "minzoom": 14
+      }
     },
     {
       "id": "waterway-other",
@@ -4955,5 +4956,6 @@
       }
     }
   ],
-  "id": "osm-bright"
+  "id": "osm-bright",
+  "maxzoom": 10
 }
