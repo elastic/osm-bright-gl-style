@@ -1439,10 +1439,26 @@
       }
     },
     {
+      "id": "boundary-land-level-4-high",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "boundary",
+      "minzoom": 10,
+      "filter": ["all", [">=", "admin_level", 4], ["!=", "maritime", 1]],
+      "layout": {"line-join": "round"},
+      "paint": {
+        "line-color": "#9e9cab",
+        "line-dasharray": [3, 1, 1, 1],
+        "line-width": {"base": 1.4, "stops": [[10, 1], [13, 2], [24, 3]]},
+        "line-opacity": 1
+      }
+    },
+    {
       "id": "boundary-land-level-4",
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "boundary",
+      "maxzoom": 10,
       "filter": [
         "all",
         [">=", "admin_level", 4],
@@ -1453,7 +1469,8 @@
       "paint": {
         "line-color": "#9e9cab",
         "line-dasharray": [3, 1, 1, 1],
-        "line-width": {"base": 1.4, "stops": [[11, 1], [13, 3]]}
+        "line-width": {"base": 1.4, "stops": [[11, 1], [13, 3], [24, 3]]},
+        "line-opacity": {"base": 1.4, "stops": [[2, 0], [4, 1]]}
       }
     },
     {
@@ -1555,7 +1572,7 @@
         "text-letter-spacing": 0.2
       },
       "paint": {
-        "text-color": "#74aee9",
+        "text-color": "rgba(47, 116, 195, 1)",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
       }
@@ -1579,7 +1596,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#74aee9",
+        "text-color": "rgba(47, 116, 195, 1)",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
       }
@@ -1971,8 +1988,22 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 5,
-      "filter": ["==", "class", "village"],
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["==", ["get", "class"], "village"],
+        [
+          "step",
+          ["zoom"],
+          true,
+          8,
+          ["<=", ["get", "rank"], 11],
+          9,
+          ["<=", ["get", "rank"], 12],
+          10,
+          ["<=", ["get", "rank"], 25]
+        ]
+      ],
       "layout": {
         "text-font": ["Noto Sans Regular"],
         "text-size": {"base": 1.2, "stops": [[10, 12], [15, 22]]},
@@ -1981,9 +2012,10 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#333",
+        "text-color": "#4d4d4d",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-opacity": 1
       }
     },
     {
@@ -1993,16 +2025,36 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "minzoom": 5,
-      "filter": ["==", "class", "town"],
+      "filter": [
+        "all",
+        ["==", ["get", "class"], "town"],
+        [
+          "step",
+          ["zoom"],
+          true,
+          5,
+          ["<=", ["get", "rank"], 10],
+          7,
+          ["<=", ["get", "rank"], 11],
+          8,
+          ["<=", ["get", "rank"], 12],
+          9,
+          ["<=", ["get", "rank"], 12],
+          10,
+          ["<=", ["get", "rank"], 18]
+        ]
+      ],
       "layout": {
         "text-font": ["Noto Sans Regular"],
         "text-size": {"base": 1.2, "stops": [[10, 14], [15, 24]]},
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 1
       },
       "paint": {
-        "text-color": "#333",
+        "text-opacity": 1,
+        "text-color": "#4d4d4d",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
@@ -2013,12 +2065,28 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 5,
+      "minzoom": 0,
       "filter": [
         "all",
-        ["!=", "capital", 2],
-        ["==", "class", "city"],
-        ["<=", "rank", 5]
+        ["==", ["get", "class"], "city"],
+        ["!=", ["get", "capital"], 2],
+        [
+          "step",
+          ["zoom"],
+          true,
+          3,
+          ["<=", ["get", "rank"], 3],
+          5,
+          ["<=", ["get", "rank"], 5],
+          7,
+          ["<=", ["get", "rank"], 11],
+          9,
+          ["<=", ["get", "rank"], 9],
+          10,
+          ["<=", ["get", "rank"], 12],
+          11,
+          ["<=", ["get", "rank"], 13]
+        ]
       ],
       "layout": {
         "text-font": ["Noto Sans Regular"],
