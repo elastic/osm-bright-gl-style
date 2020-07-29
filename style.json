@@ -2076,6 +2076,7 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
+      "minzoom": 5,
       "filter": ["==", "class", "village"],
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2096,6 +2097,7 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
+      "minzoom": 5,
       "filter": ["==", "class", "town"],
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2116,12 +2118,18 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
-      "filter": ["all", ["!=", "capital", 2], ["==", "class", "city"]],
+      "minzoom": 5,
+      "filter": [
+        "all",
+        ["!=", "capital", 2],
+        ["==", "class", "city"],
+        ["<=", "rank", 5]
+      ],
       "layout": {
-        "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
+        "text-size": {"base": 1.2, "stops": [[5, 14], [7, 14], [11, 24]]},
+        "text-field": "{name:latin}\n{name:nonlatin}",
         "text-max-width": 8,
-        "text-size": {"base": 1.2, "stops": [[7, 14], [11, 24]]},
         "visibility": "visible"
       },
       "paint": {
