@@ -1444,7 +1444,12 @@
       "source": "openmaptiles",
       "source-layer": "boundary",
       "minzoom": 10,
-      "filter": ["all", [">=", "admin_level", 4], ["!=", "maritime", 1]],
+      "filter": [
+        "all",
+        [">=", "admin_level", 4],
+        ["<=", "admin_level", 8],
+        ["!=", "maritime", 1]
+      ],
       "layout": {"line-join": "round"},
       "paint": {
         "line-color": "#9e9cab",
