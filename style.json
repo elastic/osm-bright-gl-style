@@ -15,7 +15,8 @@
     "mapbox:type": "template",
     "openmaptiles:mapbox:owner": "openmaptiles",
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
-    "openmaptiles:version": "3.x"
+    "openmaptiles:version": "3.x",
+    "maputnik:renderer": "mbgljs"
   },
   "center": [0, 0],
   "zoom": 1,
@@ -2167,8 +2168,6 @@
         "text-size": {"stops": [[3, 11], [7, 17]]},
         "text-transform": "uppercase",
         "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 11], [7, 17]]},
-        "text-transform": "uppercase",
         "visibility": "visible"
       },
       "paint": {
@@ -2197,8 +2196,6 @@
         "text-size": {"stops": [[3, 11], [7, 17]]},
         "text-transform": "uppercase",
         "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 11], [7, 17]]},
-        "text-transform": "uppercase",
         "visibility": "visible"
       },
       "paint": {
@@ -2227,8 +2224,6 @@
         "text-size": {"stops": [[2, 11], [5, 17]]},
         "text-transform": "uppercase",
         "text-max-width": 6.25,
-        "text-size": {"stops": [[2, 11], [5, 17]]},
-        "text-transform": "uppercase",
         "visibility": "visible"
       },
       "paint": {
@@ -2257,8 +2252,6 @@
         "text-size": {"stops": [[1, 11], [4, 17]]},
         "text-transform": "uppercase",
         "text-max-width": 6.25,
-        "text-size": {"stops": [[1, 11], [4, 17]]},
-        "text-transform": "uppercase",
         "visibility": "visible"
       },
       "paint": {
@@ -2281,7 +2274,6 @@
         "text-field": "{name_en}",
         "text-size": 14,
         "text-max-width": 6.25,
-        "text-size": 14,
         "text-transform": "uppercase",
         "visibility": "visible"
       },
