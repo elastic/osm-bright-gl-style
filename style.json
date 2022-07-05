@@ -912,7 +912,7 @@
         "line-color": "#e9ac77",
         "line-width": {
           "base": 1.2,
-          "stops": [[4, 0], [5, 0.4], [6, 0.4], [7, 1], [9, 1], [21, 22]]
+          "stops": [[4, 0], [5, 0.4], [6, 0.6], [7, 1.5], [20, 22]]
         },
         "line-opacity": {"stops": [[5, 0], [6, 0.2], [8, 1]]}
       }
@@ -1316,12 +1316,12 @@
         ["==", "brunnel", "bridge"],
         ["==", "class", "motorway"]
       ],
-      "layout": {"line-join": "round"},
+      "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
         "line-color": "#e9ac77",
         "line-width": {
           "base": 1.2,
-          "stops": [[2, 22], [5, 0.4], [6, 4], [9, 1], [21, 22]]
+          "stops": [[5, 0.4], [6, 0.6], [7, 1.5], [20, 22]]
         }
       }
     },
@@ -1450,7 +1450,7 @@
         ["==", "brunnel", "bridge"],
         ["==", "class", "motorway"]
       ],
-      "layout": {"line-join": "round"},
+      "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
         "line-color": "#fc8",
         "line-width": {"base": 1.2, "stops": [[6.5, 0], [7, 0.5], [20, 18]]}
