@@ -448,6 +448,7 @@
       "metadata": {"mapbox:group": "1444849354174.1904"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "tunnel"],
@@ -555,6 +556,7 @@
       "metadata": {"mapbox:group": "1444849354174.1904"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 6,
       "filter": [
         "all",
         ["==", "brunnel", "tunnel"],
@@ -840,7 +842,7 @@
       "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 7,
       "filter": [
         "all",
         ["!in", "brunnel", "bridge", "tunnel"],
@@ -866,7 +868,7 @@
       "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 7,
       "filter": [
         "all",
         ["!in", "brunnel", "bridge", "tunnel"],
@@ -892,7 +894,7 @@
       "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "all",
         ["!in", "brunnel", "bridge", "tunnel"],
@@ -1056,6 +1058,7 @@
       "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 5,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1072,7 +1075,7 @@
       },
       "paint": {
         "line-color": "#fea",
-        "line-width": {"base": 1.2, "stops": [[6.5, 0], [7, 0.5], [20, 18]]}
+        "line-width": {"base": 1.2, "stops": [[5, 0], [7, 0.5], [20, 18]]}
       }
     },
     {
@@ -1098,7 +1101,7 @@
       },
       "paint": {
         "line-color": "#fc8",
-        "line-width": {"base": 1.2, "stops": [[6.5, 0], [7, 0.5], [20, 18]]}
+        "line-width": {"base": 1.2, "stops": [[5, 0], [7, 0.5], [20, 18]]}
       }
     },
     {
@@ -1219,6 +1222,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1240,6 +1244,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1268,6 +1273,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1286,6 +1292,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1294,10 +1301,7 @@
       "layout": {"line-join": "round"},
       "paint": {
         "line-color": "hsl(28, 76%, 67%)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [[5, 0], [6, 0.4], [7, 1], [9, 1], [20, 26]]
-        }
+        "line-width": {"base": 1.2, "stops": [[7, 1], [9, 1], [20, 26]]}
       }
     },
     {
@@ -1306,6 +1310,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1314,10 +1319,7 @@
       "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
         "line-color": "#e9ac77",
-        "line-width": {
-          "base": 1.2,
-          "stops": [[5, 0.4], [6, 0.6], [7, 1.5], [20, 22]]
-        }
+        "line-width": {"base": 1.2, "stops": [[7, 1.5], [20, 22]]}
       }
     },
     {
@@ -1326,6 +1328,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 12,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1342,6 +1345,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -1359,6 +1363,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1379,6 +1384,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1406,6 +1412,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1423,6 +1430,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1440,6 +1448,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 7,
       "filter": [
         "all",
         ["==", "brunnel", "bridge"],
@@ -1457,6 +1466,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 12,
       "filter": ["all", ["==", "brunnel", "bridge"], ["==", "class", "rail"]],
       "paint": {
         "line-color": "#bbb",
@@ -1469,6 +1479,7 @@
       "metadata": {"mapbox:group": "1444849334699.1902"},
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "minzoom": 14,
       "filter": ["all", ["==", "brunnel", "bridge"], ["==", "class", "rail"]],
       "paint": {
         "line-color": "#bbb",
@@ -1543,7 +1554,7 @@
           "base": 1.4,
           "stops": [[2, 0.4], [5, 0.4], [11, 1.5], [13, 3], [24, 3]]
         },
-        "line-opacity": {"base": 1.4, "stops": [[2, 0.8], [4, 0.8], [4, 1]]}
+        "line-opacity": {"base": 1, "stops": [[2, 0.8], [4, 1]]}
       }
     },
     {
