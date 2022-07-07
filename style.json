@@ -2240,8 +2240,7 @@
         "icon-image": "star_11",
         "icon-size": 0.8,
         "text-anchor": "left",
-        "text-offset": [0.4, 0],
-        "visibility": "visible"
+        "text-offset": [0.4, 0]
       },
       "paint": {
         "text-color": "#333",
