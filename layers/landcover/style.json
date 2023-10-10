@@ -79,7 +79,21 @@
       "layout": {
         "visibility": "visible"
       },
-      "paint": {"fill-opacity": 0.8, "fill-color": "#d8e8c8"},
+      "paint": {
+        "fill-opacity": 1,
+        "fill-color": {
+          "stops": [
+            [
+              8,
+              "rgba(222, 232, 214, 1)"
+            ],
+            [
+              10,
+              "rgba(212, 224, 202, 1)"
+            ]
+          ]
+        }
+      },
       "order": 10
     },
     {
